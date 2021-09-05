@@ -34,11 +34,14 @@ export type Policy = {
 };
 
 export type UploadResponse = {
-  bucket: string,
-  key: string,
-  location: string,
+  bucket?: string,
+  key?: string,
+  location?: string,
   status: number
+  body?: string
 };
+
+
 
 export type DeleteResponse = {
   ok: boolean,

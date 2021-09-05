@@ -50,9 +50,9 @@ const newFileNameWithExtesion = 'myPdf.pdf';
 //presignedURL: string | optional 
 //newFileName: string | optional e.g myImage.png
 //acl: string | optional default public-read
-// if you use presignedURL, not need newFileName and acl parameters, can be null
+// if you use presignedURL, not need newFileName and acl parameters, can be undefined
 S3CustomClient
-    .uploadFile(file, "application/pdf", null, newFileNameWithExtesion, null)
+    .uploadFile(file, "application/pdf", undefined, newFileNameWithExtesion, undefined)
     .then(data => console.log(data))
     .catch(err => console.error(err))
 
@@ -84,7 +84,7 @@ const S3CustomClient = new AWSS3UploadAsh();
 //acl: string | optional default public-read
 // if you use presignedURL, not need newFileName and acl parameters, can be null
 S3CustomClient
-    .uploadFile(file, "application/png", "presignedlURL", null, null)
+    .uploadFile(file, "application/png", "presignedlURL", undefined, undefined)
     .then(data => console.log(data))
     .catch(err => console.error(err))
 
@@ -125,7 +125,7 @@ const newFileNameWithExtesion = 'myVideo.mp4';
 //acl: string | optional default public-read
 // if you use presignedURL, not need newFileName and acl parameters, can be null
 S3CustomClient
-    .uploadFile(file, "video/mp4", null, newFileNameWithExtesion, null)
+    .uploadFile(file, "video/mp4", undefined, newFileNameWithExtesion, undefined)
     .then(data => console.log(data))
     .catch(err => console.error(err))
 
@@ -228,6 +228,7 @@ S3CustomClient
 - Presigned URL: https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html
 - Upload Presigned URL: https://docs.aws.amazon.com/AmazonS3/latest/userguide/PresignedUrlUploadObject.html
 - Input html: https://www.w3schools.com/tags/tag_input.asp
+- S3 Bucket Cors: https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManageCorsUsing.html
 
 ## License
 **MIT**

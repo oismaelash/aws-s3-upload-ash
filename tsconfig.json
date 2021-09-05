@@ -1,21 +1,14 @@
 
 {
   "compilerOptions": {
-    // Target latest version of ECMAScript.
+    "module": "commonjs",
     "target": "esnext",
-    // Search under node_modules for non-relative imports.
-    "moduleResolution": "node",
-    // Process & infer types from .js files.
     "allowJs": true,
-    // Don't emit; allow Babel to transform files.
-    "noEmit": true,
-    // Enable strictest settings like strictNullChecks & noImplicitAny.
+    "declaration": true,
+    "outDir": "dist",
     "strict": true,
-    // Disallow features that require cross-file information for emit.
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true
+    "esModuleInterop": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
