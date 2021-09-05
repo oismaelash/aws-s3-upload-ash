@@ -1,0 +1,61 @@
+{
+    "name": "aws-s3-upload-ash",
+    "version": "1.1.0",
+    "description": "Open Source Module to Upload your Media and files into AWS S3 Bucket directly from Front-end",
+    "author": "Ismael Ash",
+    "email": "contato@ismaelnascimento.com",
+    "url": "https://ismaelnascimento.com",
+    "funding": "http://bit.ly/doeismaelnascimento",
+    "main": "dist/aws-s3-upload-ash.js",
+    "module": "dist/aws-s3-upload-ash.m.js",
+    "source": "src/aws-s3-upload-ash.ts",
+    "umd:main": "dist/aws-s3-upload-ash.umd.js",
+    "unpkg": "dist/aws-s3-upload-ash.js",
+    "scripts": {
+        "build": "microbundle",
+        "clean": "rm -rf dist",
+        "dev": "microbundle --ts watch",
+        "tslint": "tslint -c tslint.json 'src/**/*.ts'",
+        "prepublish": "npm run clean && npm run build"
+    },
+    "files": [
+        "cjs",
+        "esm",
+        "umd"
+    ],
+    "keywords": [
+        "react-component",
+        "react",
+        "s3",
+        "upload",
+        "vanillajs",
+        "vue-awss3",
+        "vuejs",
+        "typescript",
+        "angular-aws3",
+        "angular",
+        "aws",
+        "file-upload",
+        "file",
+        "aws-s3-upload-ash",
+        "presignedurl"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "crypto-js": "^3.3.0",
+        "short-uuid": "^3.1.0"
+    },
+    "devDependencies": {
+        "@types/crypto-js": "^3.1.47",
+        "microbundle": "^0.9.0",
+        "typescript": "^3.9.7"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ismaelash/aws-s3-upload-ash.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ismaelash/aws-s3-upload-ash/issues"
+    },
+    "homepage": "https://github.com/ismaelash/aws-s3-upload-ash#readme"
+}
