@@ -7,8 +7,9 @@ AWSS3UploadAsh - A Javascript Library for AWS S3 File Upload
 **http://bit.ly/doeismaelnascimento**
 
 ## How to use(youtube)
-* How to use with React = 
-* How to use with Angular = 
+* How to use with React/Next.js = 
+* How to use with Angular(12) = 
+* How to use with Vue = 
 # How get
 
 Using NPM
@@ -26,121 +27,14 @@ yarn add aws-s3-upload-ash
 
 # Examples Uploading a file
 
-## ***Uploading to S3 with bucket public***
+## React using Next.js
+- https://github.com/ismaelash/aws-s3-upload-nextjs
 
-```js
-import AWSS3UploadAsh from 'aws-s3-upload-ash';
+## Angular 12
+- https://github.com/ismaelash/aws-s3-upload-angular12
 
-const config = {
-    bucketName: 'bucketName',
-    dirName: 'media', /* optional - when use: e.g BUCKET_ROOT/dirName/fileName.extesion */ 
-    region: 'us-east-1',
-    accessKeyId: process.env.accessKeyId,
-    secretAccessKey: process.env.secretAccessKey,
-    s3Url: 'https://bucketName.s3.amazonaws.com/'
-}
-
-// if you bucket is public, you need of config
-const S3CustomClient = new AWSS3UploadAsh(config);
-
-const newFileNameWithExtesion = 'myPdf.pdf';
-
-//file: File - required | e.g input html type file
-//contentType: string | required e.g application/pdf
-//presignedURL: string | optional 
-//newFileName: string | optional e.g myImage.png
-//acl: string | optional default public-read
-// if you use presignedURL, not need newFileName and acl parameters, can be undefined
-S3CustomClient
-    .uploadFile(file, "application/pdf", undefined, newFileNameWithExtesion, undefined)
-    .then(data => console.log(data))
-    .catch(err => console.error(err))
-
-  /**
-   * 
-   * {
-   *   bucket: "bucketName",
-   *   key: "media/myPdf.pdf",
-   *   location: "https://bucketName.s3.amazonaws.com/media/myPdf.pdf",
-   *   status: 204
-   * }
-   * 
-   */
-});
-```
-
-## ***Uploading to S3 with presignedURL***
-
-```js
-import AWSS3UploadAsh from 'aws-s3-upload-ash';
-
-// if you use presignedURL, dont need config on AWSS3UploadAsh constructor
-const S3CustomClient = new AWSS3UploadAsh();
-
-//file: File - required | e.g input html type file
-//contentType: string | required e.g application/pdf
-//presignedURL: string | optional 
-//newFileName: string | optional e.g myImage.png
-//acl: string | optional default public-read
-// if you use presignedURL, not need newFileName and acl parameters, can be null
-S3CustomClient
-    .uploadFile(file, "application/png", "presignedlURL", undefined, undefined)
-    .then(data => console.log(data))
-    .catch(err => console.error(err))
-
-   /**
-   * Response se you use presignedURL parameter
-   * {
-   *   Response: {
-   *     status: 200,
-   *     body: "Upload complete"
-   *   }
-   * }
-   */
-});
-```
-
-## ***Uploading to S3 with bucket public and without directory***
-
-```js
-import AWSS3UploadAsh from 'aws-s3-upload-ash';
-
-const config = {
-    bucketName: 'bucketName',
-    region: 'us-east-1',
-    accessKeyId: process.env.accessKeyId,
-    secretAccessKey: process.env.secretAccessKey,
-    s3Url: 'https://bucketName.s3.amazonaws.com/'
-}
-
-// if you bucket is public, you need of config
-const S3CustomClient = new AWSS3UploadAsh(config);
-
-const newFileNameWithExtesion = 'myVideo.mp4';
-
-//file: File - required | e.g input html type file
-//contentType: string | required e.g application/pdf
-//presignedURL: string | optional 
-//newFileName: string | optional e.g myImage.png
-//acl: string | optional default public-read
-// if you use presignedURL, not need newFileName and acl parameters, can be null
-S3CustomClient
-    .uploadFile(file, "video/mp4", undefined, newFileNameWithExtesion, undefined)
-    .then(data => console.log(data))
-    .catch(err => console.error(err))
-
-  /**
-   * 
-   * {
-   *   bucket: "bucketName",
-   *   key: "myVideo.mp4",
-   *   location: "https://bucketName.s3.amazonaws.com/myVideo.mp4",
-   *   status: 204
-   * }
-   * 
-   */
-});
-```
+## Vue
+- https://github.com/ismaelash/aws-s3-upload-vue
 
 ## ***Deleting an existing file into directory in your bucket public***
 

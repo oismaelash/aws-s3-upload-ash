@@ -76,7 +76,7 @@ class AWSS3UploadAshClient {
       return Promise.resolve({
         bucket: this.config.bucketName,
         key: `${this.config.dirName ? this.config.dirName + "/" : ""}${fileName}`,
-        location: `${url}/${this.config.dirName ? this.config.dirName + "/" : ""}${fileName}`,
+        location: `${url}${this.config.dirName ? `${this.config.dirName}/` : ""}${fileName}`,
         status: data.status
       });
     }
