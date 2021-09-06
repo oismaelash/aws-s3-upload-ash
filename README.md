@@ -3,14 +3,17 @@ Open Source Module to Upload your Media and files into AWS S3 Bucket directly fr
 <br>
 AWSS3UploadAsh - A Javascript Library for AWS S3 File Upload
 
+# Demo
+**https://awss3uploadash.ismaelnascimento.com/**
+
 # Donate
 **http://bit.ly/doeismaelnascimento**
 
 ## How to use(youtube)
-* How to use with React/Next.js = 
-* How to use with Angular(12) = 
-* How to use with Vue = 
-# How get
+* How to use with React/Next.js = https://youtu.be/kMsIUTNVlaU
+* How to use with Angular(12) = https://youtu.be/LV1U_1G0vYs
+* How to use with Vue = https://youtu.be/9x5LGaL2W7E
+# How to get
 
 Using NPM
 
