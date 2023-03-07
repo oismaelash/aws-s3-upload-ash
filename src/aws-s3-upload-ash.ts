@@ -25,15 +25,12 @@ class AWSS3UploadAshClient {
 
     if (presignedURL) {
       try {
-        const formData = new FormData();
-        formData.append('file', file);
-
         const payload = {
           method: "PUT",
           headers: {
             'Content-Type': contentType
           },
-          body: formData
+          body: file
         }
         await fetch(presignedURL, payload)
 
