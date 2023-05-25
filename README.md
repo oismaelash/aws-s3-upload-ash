@@ -3,8 +3,8 @@ Open Source Module to Upload your Media and files into AWS S3 Bucket directly fr
 <br>
 AWSS3UploadAsh - A Javascript Library for AWS S3 File Upload
 
-# Demo
-**https://awss3uploadash.ismaelnascimento.com/**
+# NPM
+https://www.npmjs.com/package/aws-s3-upload-ash
 
 # Donate
 **http://bit.ly/doeismaelnascimento**
